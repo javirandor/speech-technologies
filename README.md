@@ -31,4 +31,56 @@ cp -a <your models folder>/es-es/es-es .
 cp -a <your models folder>/es-es/es.dict .
 cp -a <your models folder>/es-es/es-es.lm.bin .
 ```
-3. Test
+3. Generating acoustic features files
+```
+sphinx_fe -argfile es-es/feat.params -samprate 16000 -c corele.fileids -di . -do . -ei wav -eo mfc -mswav yes
+```
+4. Accumulating observation counts
+```
+./bw \
+ -hmmdir es-es \
+ -moddeffn es-es/mdef \
+ -ts2cbfn .ptm. \
+ -feat 1s_c_d_dd \
+ -fdictfn es-es/noisedict \
+ -svspec 0-12/13-25/26-38 \
+ -cmn current \
+ -agc none \
+ -dictfn es.dict \
+ -ctlfn corele.fileids \
+ -lsnfn corele.transcription \
+ -accumdir .
+```
+5. Creating a transformation with MLLR
+```
+./mllr_solve \
+    -meanfn es-es/means \
+    -varfn es-es/variances \
+    -outmllrfn mllr_matrix -accumdir .
+```
+6. Create a folder for the adapted model
+```
+cp -a es-es es-es-adapt
+```
+7. Updating the acoustic model files with MAP
+```
+./map_adapt \
+    -moddeffn es-es/mdef \
+    -ts2cbfn .ptm. \
+    -meanfn es-es/means \
+    -varfn es-es/variances \
+    -mixwfn es-es/mixture_weights \
+    -tmatfn es-es/transition_matrices \
+    -accumdir . \
+    -mapmeanfn es-es-adapt/means \
+    -mapvarfn es-es-adapt/variances \
+    -mapmixwfn es-es-adapt/mixture_weights \
+    -maptmatfn es-es-adapt/transition_matrices
+```
+8. Recreating the adapted sendump file
+````
+./mk_s2sendump \
+    -pocketsphinx yes \
+    -moddeffn es-es-adapt/mdef \
+    -mixwfn es-es-adapt/mixture_weights \
+    -sendumpfn es-es-adapt/sendump
