@@ -4,7 +4,7 @@
 
 This repository contains the code used for my final project in Speech Technologies and the explanatory slides.
 
-The goal of the project is adapting CMUSphinx model for non-native Spanish speakers. The dataset used was CORELE, more information can be found here: http://cartago.lllf.uam.es/corele/corpus_es.html.
+The goal of the project is adapting CMUSphinx model for non-native Spanish speakers. The dataset used was CORELE, more information can be found here(http://cartago.lllf.uam.es/corele/corpus_es.html)
 
 The obtained accuracy was not the expected probably due to the following limitations:
 
