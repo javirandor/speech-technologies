@@ -25,7 +25,7 @@ It must be done in the order indicated by the name of the files:
 5. [Test models](https://github.com/javirandor/speech-technologies/blob/master/5.%20Test%20models.ipynb) (must be done after adapting the model)
 
 ## Adapting the model
-This process follows the documentation published by CMUSphinx here(https://cmusphinx.github.io/wiki/tutorialadapt/).
+This process follows the documentation published by CMUSphinx [here](https://cmusphinx.github.io/wiki/tutorialadapt/).
 
 To execute the following instructions, you will have to copy these scripts to your working folder from `cmu-sphinxtrain` previously. These are the commands for MAC.
 
