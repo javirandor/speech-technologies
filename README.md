@@ -11,3 +11,7 @@ The obtained accuracy was not the expected probably due to the following limitat
 * A further expansion of the dictionary should be considered.
 * The language model wasn't updated
 * Data comes from interviews. This data are shorts sentences with interrumptions.
+
+### Executing the code
+It must be done in the order indicated by the name of the files:
+1. Crawler
