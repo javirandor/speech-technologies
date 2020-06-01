@@ -27,7 +27,7 @@ It must be done in the order indicated by the name of the files:
 ## Adapting the model
 This process follows the documentation published by CMUSphinx here(https://cmusphinx.github.io/wiki/tutorialadapt/).
 
-To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
+To execute the following instructions, you will have to copy these scripts to your working folder from `cmu-sphinxtrain` previously. These are the commands for MAC.
 
 ```
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/bw <working directory>
@@ -35,7 +35,6 @@ cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mllr_solve
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/map_adapt <working directory>
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mk_s2sendump <working directory>
 ```
-To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
 
 For my specific use case, this was the followed process:
 1. Creating a working repository where I placed my training audio files and transcription.
