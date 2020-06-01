@@ -29,12 +29,12 @@ This process follows the documentation published by CMUSphinx here(https://cmusp
 
 To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
 
-````
+```
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/bw <working directory>
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mllr_solve <working directory>
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/map_adapt <working directory>
 cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mk_s2sendump <working directory>
-````
+```
 To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
 
 For my specific use case, this was the followed process:
@@ -92,7 +92,7 @@ cp -a es-es es-es-adapt
     -maptmatfn es-es-adapt/transition_matrices
 ```
 8. Recreating the adapted sendump file
-````
+```
 ./mk_s2sendump \
     -pocketsphinx yes \
     -moddeffn es-es-adapt/mdef \
