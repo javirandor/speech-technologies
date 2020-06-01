@@ -12,6 +12,10 @@ The obtained accuracy was not the expected probably due to the following limitat
 * The language model wasn't updated
 * Data comes from interviews. This data are shorts sentences with interrumptions.
 
+## Requirements
+* Pocketsphinx
+* [Spanish pre-trained model](https://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/Spanish/)
+
 ## Executing the code
 It must be done in the order indicated by the name of the files:
 1. [Crawler](https://github.com/javirandor/speech-technologies/blob/master/1.%20Crawler.ipynb)
@@ -22,6 +26,16 @@ It must be done in the order indicated by the name of the files:
 
 ## Adapting the model
 This process follows the documentation published by CMUSphinx here(https://cmusphinx.github.io/wiki/tutorialadapt/).
+
+To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
+
+````
+cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/bw <working directory>
+cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mllr_solve <working directory>
+cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/map_adapt <working directory>
+cp /usr/local/Cellar/cmu-sphinxtrain/HEAD-0c21a6e/libexec/sphinxtrain/mk_s2sendump <working directory>
+````
+To execute the following instructions, you will have to copy these scripts to your working folder previously. These are the commands for MAC.
 
 For my specific use case, this was the followed process:
 1. Creating a working repository where I placed my training audio files and transcription.
