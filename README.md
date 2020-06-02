@@ -22,7 +22,7 @@ It must be done in the order indicated by the name of the files:
 2. [Splitting audio and generating unique transcription](https://github.com/javirandor/speech-technologies/blob/master/2.%20Split%20audio%20and%20generate%20transcription.ipynb)
 3. [Transcription Normalization](https://github.com/javirandor/speech-technologies/blob/master/3.%20Transcription%20Normalization.ipynb)
 4. [Updating dictionary](https://github.com/javirandor/speech-technologies/blob/master/4.%20Update%20Dictionary.ipynb)
-5. [Test models](https://github.com/javirandor/speech-technologies/blob/master/5.%20Test%20models.ipynb) (must be done after adapting the model)
+5. [Test models](https://github.com/javirandor/speech-technologies/blob/master/5.%20Test%20models.ipynb) (must be done after adapting the model). You may need to replace your updated `noisedict` by the original one. Otherwise, the decoder may not obtain an output. 
 
 ## Adapting the model
 This process follows the documentation published by CMUSphinx [here](https://cmusphinx.github.io/wiki/tutorialadapt/).
